@@ -26,6 +26,7 @@ import (
 	logf "sigs.k8s.io/controller-runtime/pkg/runtime/log"
 	"sigs.k8s.io/controller-runtime/pkg/webhook"
 )
+
 // log is for logging in this package.
 var cronjoblog = logf.Log.WithName("cronjob-resource")
 
@@ -132,4 +133,3 @@ func (r *CronJob) validateCronJobName() *field.Error {
 	}
 	return nil
 }
-
